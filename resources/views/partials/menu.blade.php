@@ -19,36 +19,6 @@
                         {{ trans('cruds.userManagement.title') }}
                     </a>
                     <ul class="nav-dropdown-items">
-                    @can('career_access')
-                            <li class="nav-item">
-                                <a href="{{ route("admin.careers.index") }}" class="nav-link {{ request()->is('admin/careers') || request()->is('admin/careers/*') ? 'active' : '' }}">
-                                    <i class="fa-fw fas fa-building nav-icon">
-
-                                    </i>
-                                    {{ trans('cruds.career.title') }}
-                                </a>
-                            </li>
-                        @endcan
-                        @can('course_access')
-                            <li class="nav-item">
-                                <a href="{{ route("admin.courses.index") }}" class="nav-link {{ request()->is('admin/courses') || request()->is('admin/courses/*') ? 'active' : '' }}">
-                                    <i class="fa-fw fas fa-building nav-icon">
-
-                                    </i>
-                                    {{ trans('cruds.course.title') }}
-                                </a>
-                            </li>
-                        @endcan
-                        @can('university_access')
-                            <li class="nav-item">
-                                <a href="{{ route("admin.universities.index") }}" class="nav-link {{ request()->is('admin/universities') || request()->is('admin/universities/*') ? 'active' : '' }}">
-                                    <i class="fa-fw fas fa-building nav-icon">
-
-                                    </i>
-                                    {{ trans('cruds.university.title') }}
-                                </a>
-                            </li>
-                        @endcan
                         @can('permission_access')
                             <li class="nav-item">
                                 <a href="{{ route("admin.permissions.index") }}" class="nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
@@ -80,34 +50,6 @@
                             </li>
                         @endcan
                     </ul>
-                </li>
-            @endcan
-            <li class="nav-item">
-                <a href="{{ route("admin.systemCalendar") }}" class="nav-link {{ request()->is('admin/system-calendar') || request()->is('admin/system-calendar/*') ? 'active' : '' }}">
-                    <i class="nav-icon fa-fw fas fa-calendar">
-
-                    </i>
-                    {{ trans('global.systemCalendar') }}
-                </a>
-            </li>
-            @can('appointment_access')
-            <li class="nav-item">
-                <a href="{{ route("admin.appointment.index") }}" class="nav-link {{ request()->is('admin/appointment') || request()->is('admin/appointment/*') ? 'active' : '' }}">
-                    <i class="nav-icon fa-fw fas fa-calendar-check">
-
-                    </i>
-                    {{ trans('global.appointment') }}
-                </a>
-            </li>
-            @endcan
-            @can('event_access')
-                <li class="nav-item">
-                    <a href="{{ route("admin.events.index") }}" class="nav-link {{ request()->is('admin/events') || request()->is('admin/events/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-calendar nav-icon">
-
-                        </i>
-                        {{ trans('cruds.event.title') }}
-                    </a>
                 </li>
             @endcan
             <li class="nav-item">

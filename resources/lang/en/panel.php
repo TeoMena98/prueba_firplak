@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'ANTIVIRUS',
+    'site_title' => 'OMS|CGH',
 ];
